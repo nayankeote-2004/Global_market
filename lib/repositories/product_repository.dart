@@ -11,7 +11,7 @@ class ProductRepository {
           .map((json) => Product.fromJson(json))
           .toList();
     } catch (e) {
-      throw Exception('Failed to load products');
+      throw Exception('Failed to load products.Check your Internet connection.');
     }
   }
 }

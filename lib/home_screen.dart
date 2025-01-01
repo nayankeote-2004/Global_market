@@ -12,6 +12,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   int _currentIndex = 0;
   PageController _pageController = PageController();
   late AnimationController _fabAnimationController;
+  // ignore: unused_field
   late Animation<double> _fabRotateAnimation;
 
   final List<Widget> _screens = [
@@ -132,10 +133,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 },
               ),
               if (isSelected) ...[
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Text(
                   label,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,

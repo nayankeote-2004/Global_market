@@ -60,15 +60,15 @@ class _ProductListScreenState extends State<ProductListScreen> {
                       _searchQuery = value.toLowerCase();
                     });
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Search products...',
                     border: InputBorder.none,
                     hintStyle: TextStyle(color: Colors.white70),
                   ),
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
                   cursorColor: Colors.white,
                 )
-              : Text(
+              : const Text(
                   'Products',
                   style: TextStyle(
                     color: Colors.white,
@@ -100,7 +100,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
               if (state is ProductLoading) {
                 return Center(
                   child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.blue[700]!),
+                    valueColor:
+                        AlwaysStoppedAnimation<Color>(Colors.blue[700]!),
                   ),
                 );
               } else if (state is ProductLoaded) {
@@ -113,9 +114,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
                   padding: const EdgeInsets.all(12.0),
                   child: filteredProducts.isNotEmpty
                       ? GridView.builder(
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
+                              const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             childAspectRatio: 0.75,
                             crossAxisSpacing: 16,
@@ -154,7 +155,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                 size: 60,
                                 color: Colors.blue[300],
                               ),
-                              SizedBox(height: 16),
+                              const SizedBox(height: 16),
                               Text(
                                 'No products match your search',
                                 style: TextStyle(
@@ -177,7 +178,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                         size: 60,
                         color: Colors.blue[700],
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       Text(
                         state.message,
                         style: TextStyle(
@@ -200,7 +201,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                       size: 60,
                       color: Colors.blue[300],
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     Text(
                       'No products available',
                       style: TextStyle(

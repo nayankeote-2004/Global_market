@@ -15,7 +15,7 @@ class ProductDetailScreen extends StatelessWidget {
         backgroundColor: Colors.blue[700],
         title: Text(
           product.title,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,
           ),
@@ -32,7 +32,7 @@ class ProductDetailScreen extends StatelessWidget {
               height: 350,
               decoration: BoxDecoration(
                 color: Colors.blue[50],
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30),
                 ),
@@ -74,16 +74,16 @@ class ProductDetailScreen extends StatelessWidget {
                     ),
                     child: Text(
                       '\$${product.price}',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Container(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       color: Colors.blue[50],
                       borderRadius: BorderRadius.circular(12),

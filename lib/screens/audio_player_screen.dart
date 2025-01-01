@@ -44,7 +44,7 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.blue[700],
-        title: Text(
+        title: const Text(
           'Audio Player',
           style: TextStyle(
             color: Colors.white,
@@ -66,10 +66,10 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            margin: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(20),
             child: Container(
               width: double.infinity,
-              padding: EdgeInsets.all(24),
+              padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -97,7 +97,7 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                       color: Colors.blue[700],
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   Text(
                     'Now Playing',
                     style: TextStyle(
@@ -106,7 +106,7 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                       color: Colors.blue[900],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   StreamBuilder<Duration?>(
                     stream: _audioPlayer.positionStream,
                     builder: (context, snapshot) {
@@ -122,7 +122,7 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                                   thumbColor: Colors.blue[700],
                                   activeTrackColor: Colors.blue[700],
                                   inactiveTrackColor: Colors.blue[100],
-                                  thumbShape: RoundSliderThumbShape(
+                                  thumbShape: const RoundSliderThumbShape(
                                     enabledThumbRadius: 8,
                                   ),
                                   trackHeight: 4,
@@ -138,7 +138,7 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 20),
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
@@ -165,19 +165,19 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                       );
                     },
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.skip_previous),
+                        icon: const Icon(Icons.skip_previous),
                         iconSize: 40,
                         color: Colors.blue[700],
                         onPressed: () {
                           _audioPlayer.seek(Duration.zero);
                         },
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.blue[700],
@@ -205,9 +205,9 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                           },
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       IconButton(
-                        icon: Icon(Icons.stop),
+                        icon: const Icon(Icons.stop),
                         iconSize: 40,
                         color: Colors.blue[700],
                         onPressed: () {
